@@ -10,8 +10,13 @@ const Card = ({ ticket, user, icon, statusIcon, statusColor, bgColor }) => {
                 <p className='card_id'>{ticket?.id}</p>
                 {user && <UserIcon intials={userIntials} available={user?.available} bgColor={bgColor} />}
             </div>
-            <div className='card_info'>
-                <span style={{ color: statusColor }}>{statusIcon}</span>
+            <div className='card_info' style={{ display: 'inline-flex', alignItems: 'flex-start' }}>
+    <span style={{ color: statusColor, display: 'inline-flex', alignItems: 'center', lineHeight: '1' , marginTop: '20px'}}>
+        {statusIcon}
+    </span>
+
+
+
                 <p>
                     {ticket?.title}
                 </p>
