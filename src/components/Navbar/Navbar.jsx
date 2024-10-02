@@ -2,6 +2,8 @@ import './Navbar.css'
 import { MdOutlineTune } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
 import { useState, useEffect, useRef } from 'react';
+import DownArrow from '../../icons_FEtask/down.svg'
+import Display from '../../icons_FEtask/Display.svg'
 
 const groupOptions = [
     {
@@ -63,9 +65,9 @@ const Navbar = ({ group, order, onGroupchange, onOrderChange }) => {
                 className='expand_btn'
                 onClick={() => { setExpandMore(prev => !prev) }}
             >
-                <MdOutlineTune />
-                <span>Display</span>
-                <FaAngleDown />
+                <img src={Display} alt="" width={15} height={15}/>
+                <span >Display</span>
+                <img src={DownArrow} alt="" width={15} height={15}/>
             </div>
             {expandMore && (
                 <div className="dropdown" ref={dropdownRef}>  {/* Attach ref to dropdown */}
